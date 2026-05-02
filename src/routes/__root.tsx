@@ -29,14 +29,18 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "Cestas & Eventos Judith" },
+      { name: "description", content: "Cestas personalizadas y decoración de eventos en Málaga. Creamos momentos únicos con asesoramiento y presupuestos sin coste." },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "Cestas & Eventos Judith" },
+      { property: "og:description", content: "Cestas personalizadas y decoración de eventos en Málaga. Creamos momentos únicos con asesoramiento y presupuestos sin coste." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Cestas & Eventos Judith" },
+      { name: "twitter:description", content: "Cestas personalizadas y decoración de eventos en Málaga. Creamos momentos únicos con asesoramiento y presupuestos sin coste." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/G6nj9mdDesTN3r7B2Yg2ZkxIREg1/social-images/social-1777725847980-logocestas_eventojudith.webp" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/G6nj9mdDesTN3r7B2Yg2ZkxIREg1/social-images/social-1777725847980-logocestas_eventojudith.webp" },
     ],
     links: [
       {
