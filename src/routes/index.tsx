@@ -1,26 +1,20 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Landing } from "@/components/Landing";
 
 export const Route = createFileRoute("/")({
-  component: Index,
+  component: Landing,
+  head: () => ({
+    meta: [
+      { title: "Cestas & Eventos Judith | Cestas personalizadas y decoración de eventos en Málaga" },
+      {
+        name: "description",
+        content:
+          "Cestas de bebé personalizadas, decoración de cumpleaños y eventos, regalos únicos en Málaga. Asesoramiento y presupuestos sin coste. Envíos a toda España.",
+      },
+      { name: "keywords", content: "cestas personalizadas Málaga, decoración eventos Málaga, regalos personalizados Málaga, cestas bebé Málaga" },
+      { property: "og:title", content: "Cestas & Eventos Judith — Momentos únicos en Málaga" },
+      { property: "og:description", content: "Creamos experiencias y momentos únicos con cestas y eventos personalizados." },
+      { property: "og:type", content: "website" },
+    ],
+  }),
 });
-
-// IMPORTANT: Replace this placeholder. For sites with multiple pages (About, Services, Contact, etc.),
-// create separate route files (about.tsx, services.tsx, contact.tsx) — don't put all pages in this file.
-function PlaceholderIndex() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
-}
-
-function Index() {
-  return <PlaceholderIndex />;
-}
