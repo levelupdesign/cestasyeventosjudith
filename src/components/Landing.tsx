@@ -80,29 +80,40 @@ export function Landing() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="text-5xl sm:text-6xl lg:text-7xl font-semibold leading-[1.02] text-foreground"
+            className="text-4xl sm:text-5xl lg:text-6xl font-semibold leading-[1.05] text-foreground"
           >
             Creamos{" "}
-            <span className="italic text-gradient-gold">momentos</span>{" "}
-            únicos
+            <span className="italic text-gradient-gold">momentos únicos</span>{" "}
+            que emocionan de verdad
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.25 }}
-            className="mt-5 text-lg text-muted-foreground max-w-md"
+            className="mt-5 text-base sm:text-lg text-muted-foreground max-w-md"
           >
-            Cestas personalizadas y eventos en Málaga. No vendemos productos, creamos experiencias.
+            Cestas personalizadas y decoración de eventos en Málaga. Cada detalle cuidado para sorprender de verdad.
           </motion.p>
+
+          <motion.ul
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.35 }}
+            className="mt-6 space-y-1.5 text-sm text-foreground/80"
+          >
+            <li>✔ Asesoramiento y presupuestos sin coste</li>
+            <li>✔ Diseños personalizados en 3–5 días</li>
+            <li>✔ Envíos a toda España en cestas</li>
+          </motion.ul>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="mt-8 flex flex-wrap gap-3"
+            transition={{ duration: 0.8, delay: 0.5 }}
+            className="mt-7 flex flex-wrap gap-3"
           >
-            <PrimaryCTA />
+            <PrimaryCTA>Solicitar presupuesto por WhatsApp</PrimaryCTA>
             <a
               href={waLink("¡Hola Judith! Me gustaría contactar contigo.")}
               target="_blank"
@@ -113,15 +124,6 @@ export function Landing() {
               Contacta conmigo
             </a>
           </motion.div>
-
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.7 }}
-            className="mt-6 text-xs text-muted-foreground italic"
-          >
-            ✨ Asesoramiento y presupuestos sin coste
-          </motion.p>
         </div>
 
         <motion.div
@@ -273,13 +275,13 @@ export function Landing() {
           <div className="relative">
             <Sparkles className="h-8 w-8 text-[var(--gold-foreground)] mx-auto mb-5" />
             <h2 className="text-4xl sm:text-6xl font-semibold text-foreground max-w-2xl mx-auto leading-tight">
-              Cuéntame tu idea y la <span className="italic text-gradient-gold">hacemos realidad</span>
+              ¿Tienes una idea? Cuéntamela y la <span className="italic text-gradient-gold">hacemos realidad</span> ✨
             </h2>
             <p className="mt-5 text-muted-foreground max-w-md mx-auto">
               Asesoramiento y presupuestos sin coste. Respuesta en horas.
             </p>
             <div className="mt-9">
-              <PrimaryCTA />
+              <PrimaryCTA>Solicitar presupuesto por WhatsApp</PrimaryCTA>
             </div>
           </div>
         </motion.div>
