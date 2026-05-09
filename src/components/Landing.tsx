@@ -1,14 +1,15 @@
 import { motion } from "framer-motion";
 import { ArrowRight, MessageCircle, MapPin, Sparkles } from "lucide-react";
 import { Gift, Cake, PartyPopper, Heart, Flower2 } from "lucide-react";
-import heroImg from "@/assets/real-hero.jpg";
-import g1 from "@/assets/real-cesta-bebe.jpg";
-import g2 from "@/assets/real-regalo-personalizado.jpg";
-import g3 from "@/assets/real-g1.jpg";
-import g4 from "@/assets/real-g2.jpg";
-import g5 from "@/assets/real-g3.jpg";
-import g6 from "@/assets/real-g4.jpg";
-import g7 from "@/assets/real-g5.jpg";
+import heroImg from "@/assets/judith.jpg";
+import g1 from "@/assets/real-hero.jpg";
+import g2 from "@/assets/real-cesta-bebe.jpg";
+import g3 from "@/assets/real-regalo-personalizado.jpg";
+import g4 from "@/assets/real-g1.jpg";
+import g5 from "@/assets/real-g2.jpg";
+import g6 from "@/assets/real-g3.jpg";
+import g7 from "@/assets/real-g4.jpg";
+import g8 from "@/assets/real-g5.jpg";
 import { waLink, PHONE_DISPLAY, EMAIL, LINKEDIN, LOCATION } from "@/lib/contact";
 import { Navbar } from "@/components/Navbar";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
@@ -36,6 +37,7 @@ const gallery = [
   { src: g5, span: "" },
   { src: g6, span: "" },
   { src: g7, span: "" },
+  { src: g8, span: "" },
 ];
 
 const steps = ["Idea", "Diseño", "Preparación", "Entrega"];
@@ -132,10 +134,10 @@ export function Landing() {
           <div className="absolute -inset-6 bg-gradient-rose rounded-[3rem] blur-3xl opacity-50" />
           <img
             src={heroImg}
-            alt="Cesta personalizada elegante con flores secas y detalles dorados"
-            width={1600}
-            height={1200}
-            className="relative w-full h-full object-cover rounded-[2rem] shadow-glow"
+            alt="Judith Ponce Almansa, creadora de Cestas & Eventos Judith en Málaga"
+            width={1200}
+            height={1600}
+            className="relative w-full h-full object-cover object-top rounded-[2rem] shadow-glow"
           />
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -143,8 +145,8 @@ export function Landing() {
             transition={{ delay: 1, duration: 0.6 }}
             className="absolute -bottom-4 -left-4 sm:bottom-6 sm:left-6 bg-card/95 backdrop-blur rounded-2xl px-5 py-3 shadow-card"
           >
-            <p className="text-xs text-muted-foreground">Cada detalle</p>
-            <p className="font-display text-lg italic text-foreground">cuenta una historia</p>
+            <p className="text-xs text-muted-foreground">Hola, soy</p>
+            <p className="font-display text-lg italic text-foreground">Judith ✨</p>
           </motion.div>
         </motion.div>
       </section>
