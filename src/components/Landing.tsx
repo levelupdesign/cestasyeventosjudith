@@ -1,18 +1,14 @@
 import { motion } from "framer-motion";
 import { ArrowRight, MessageCircle, MapPin, Sparkles } from "lucide-react";
 import { Gift, Cake, PartyPopper, Heart, Flower2 } from "lucide-react";
-import heroImg from "@/assets/hero-cestas.jpg";
-import sCestas from "@/assets/service-cestas-bebe.jpg";
-import sCumple from "@/assets/service-cumpleanos.jpg";
-import sEventos from "@/assets/service-eventos.jpg";
-import sRegalos from "@/assets/service-regalos.jpg";
-import sDetalles from "@/assets/service-detalles.jpg";
-import g1 from "@/assets/gallery-1.jpg";
-import g2 from "@/assets/gallery-2.jpg";
-import g3 from "@/assets/gallery-3.jpg";
-import g4 from "@/assets/gallery-4.jpg";
-import g5 from "@/assets/gallery-5.jpg";
-import g6 from "@/assets/gallery-6.jpg";
+import heroImg from "@/assets/real-hero.jpg";
+import g1 from "@/assets/real-cesta-bebe.jpg";
+import g2 from "@/assets/real-regalo-personalizado.jpg";
+import g3 from "@/assets/real-g1.jpg";
+import g4 from "@/assets/real-g2.jpg";
+import g5 from "@/assets/real-g3.jpg";
+import g6 from "@/assets/real-g4.jpg";
+import g7 from "@/assets/real-g5.jpg";
 import { waLink, PHONE_DISPLAY, EMAIL, LINKEDIN, LOCATION } from "@/lib/contact";
 import { Navbar } from "@/components/Navbar";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
@@ -25,11 +21,11 @@ const fadeUp = {
 };
 
 const services = [
-  { icon: Gift, title: "Cestas de bebé", desc: "Personalizadas con detalle y mimo.", img: sCestas },
-  { icon: Cake, title: "Cumpleaños", desc: "Decoraciones que emocionan.", img: sCumple },
-  { icon: PartyPopper, title: "Eventos", desc: "Diseño integral a medida.", img: sEventos },
-  { icon: Heart, title: "Regalos personalizados", desc: "Únicos como la persona.", img: sRegalos },
-  { icon: Flower2, title: "Detalles especiales", desc: "Pequeños gestos, gran impacto.", img: sDetalles },
+  { icon: Gift, title: "Cestas de bebé", desc: "Personalizadas con detalle y mimo." },
+  { icon: Cake, title: "Cumpleaños", desc: "Decoraciones que emocionan." },
+  { icon: PartyPopper, title: "Eventos", desc: "Diseño integral a medida." },
+  { icon: Heart, title: "Regalos personalizados", desc: "Únicos como la persona." },
+  { icon: Flower2, title: "Detalles especiales", desc: "Pequeños gestos, gran impacto." },
 ];
 
 const gallery = [
@@ -39,6 +35,7 @@ const gallery = [
   { src: g4, span: "row-span-2" },
   { src: g5, span: "" },
   { src: g6, span: "" },
+  { src: g7, span: "" },
 ];
 
 const steps = ["Idea", "Diseño", "Preparación", "Entrega"];
@@ -167,35 +164,21 @@ export function Landing() {
               key={s.title}
               {...fadeUp}
               transition={{ duration: 0.6, delay: i * 0.08 }}
-              className="group relative overflow-hidden rounded-3xl bg-card shadow-card hover:shadow-glow transition-all duration-500 hover:-translate-y-1"
+              className="group relative rounded-3xl bg-card shadow-card hover:shadow-glow transition-all duration-500 hover:-translate-y-1 p-7"
             >
-              <div className="aspect-[4/3] overflow-hidden">
-                <img
-                  src={s.img}
-                  alt={s.title}
-                  loading="lazy"
-                  width={1024}
-                  height={1024}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
+              <div className="h-14 w-14 rounded-2xl bg-gradient-rose flex items-center justify-center text-primary mb-5 shadow-card">
+                <s.icon className="h-6 w-6" />
               </div>
-              <div className="p-6">
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="h-9 w-9 rounded-full bg-rose/40 flex items-center justify-center text-primary">
-                    <s.icon className="h-4 w-4" />
-                  </div>
-                  <h3 className="font-display text-xl font-semibold text-foreground">{s.title}</h3>
-                </div>
-                <p className="text-sm text-muted-foreground mb-5">{s.desc}</p>
-                <a
-                  href={waLink(`¡Hola Judith! Me interesa: ${s.title}.`)}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:gap-2.5 transition-all"
-                >
-                  Solicitar presupuesto <ArrowRight className="h-3.5 w-3.5" />
-                </a>
-              </div>
+              <h3 className="font-display text-xl font-semibold text-foreground mb-2">{s.title}</h3>
+              <p className="text-sm text-muted-foreground mb-5">{s.desc}</p>
+              <a
+                href={waLink(`¡Hola Judith! Me interesa: ${s.title}.`)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:gap-2.5 transition-all"
+              >
+                Solicitar presupuesto <ArrowRight className="h-3.5 w-3.5" />
+              </a>
             </motion.article>
           ))}
         </div>
