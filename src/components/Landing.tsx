@@ -21,11 +21,11 @@ const fadeUp = {
 };
 
 const services = [
-  { icon: Gift, title: "Cestas de bebé", desc: "Personalizadas con detalle y mimo.", img: sCestas },
-  { icon: Cake, title: "Cumpleaños", desc: "Decoraciones que emocionan.", img: sCumple },
-  { icon: PartyPopper, title: "Eventos", desc: "Diseño integral a medida.", img: sEventos },
-  { icon: Heart, title: "Regalos personalizados", desc: "Únicos como la persona.", img: sRegalos },
-  { icon: Flower2, title: "Detalles especiales", desc: "Pequeños gestos, gran impacto.", img: sDetalles },
+  { icon: Gift, title: "Cestas de bebé", desc: "Personalizadas con detalle y mimo." },
+  { icon: Cake, title: "Cumpleaños", desc: "Decoraciones que emocionan." },
+  { icon: PartyPopper, title: "Eventos", desc: "Diseño integral a medida." },
+  { icon: Heart, title: "Regalos personalizados", desc: "Únicos como la persona." },
+  { icon: Flower2, title: "Detalles especiales", desc: "Pequeños gestos, gran impacto." },
 ];
 
 const gallery = [
@@ -35,6 +35,7 @@ const gallery = [
   { src: g4, span: "row-span-2" },
   { src: g5, span: "" },
   { src: g6, span: "" },
+  { src: g7, span: "" },
 ];
 
 const steps = ["Idea", "Diseño", "Preparación", "Entrega"];
