@@ -10,7 +10,9 @@ import g5 from "@/assets/real-g2.jpg";
 import g6 from "@/assets/real-g3.jpg";
 import g7 from "@/assets/real-g4.jpg";
 import g8 from "@/assets/real-g5.jpg";
-import { waLink, PHONE_DISPLAY, EMAIL, LINKEDIN, LOCATION } from "@/lib/contact";
+import g9 from "@/assets/real-g6.jpg";
+import g10 from "@/assets/real-g7.jpg";
+import { waLink, PHONE, PHONE_DISPLAY, EMAIL, LINKEDIN, LOCATION } from "@/lib/contact";
 import { Navbar } from "@/components/Navbar";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 
@@ -33,9 +35,11 @@ const gallery = [
   { src: g1, span: "row-span-2" },
   { src: g2, span: "" },
   { src: g3, span: "" },
+  { src: g9, span: "" },
   { src: g4, span: "row-span-2" },
   { src: g5, span: "" },
   { src: g6, span: "" },
+  { src: g10, span: "" },
   { src: g7, span: "" },
   { src: g8, span: "" },
 ];
@@ -63,8 +67,8 @@ export function Landing() {
       <WhatsAppFloat />
 
       {/* HERO */}
-      <section className="relative min-h-[100svh] grid lg:grid-cols-2 items-center gap-8 bg-gradient-warm pt-24 pb-10 px-5 sm:px-10 overflow-hidden">
-        <div className="relative z-10 max-w-xl lg:pr-10">
+      <section className="relative min-h-[100svh] grid lg:grid-cols-[1.1fr_1fr] items-center gap-0 bg-gradient-warm pt-24 pb-10 px-5 sm:px-10 overflow-hidden">
+        <div className="relative z-10 max-w-2xl lg:pr-0 lg:pl-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -80,10 +84,15 @@ export function Landing() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
             className="text-4xl sm:text-5xl lg:text-6xl font-semibold leading-[1.05] text-foreground"
-          >
+      >
             Creamos{" "}
             <span className="italic text-gradient-gold">momentos únicos</span>{" "}
             que emocionan de verdad
+      
+            <br />
+      
+            para cada ocasión especial
+       
           </motion.h1>
 
           <motion.p
@@ -138,7 +147,7 @@ export function Landing() {
               alt="Judith Ponce Almansa, creadora de Cestas & Eventos Judith en Málaga"
               width={1200}
               height={1600}
-              className="relative h-[60vh] lg:h-full w-auto max-w-full object-contain rounded-[2rem] shadow-glow"
+              className="relative h-[75vh] lg:h-[98vh] w-full object-cover rounded-[2.5rem] shadow-glow"
             />
             <motion.div
               initial={{ opacity: 0, x: -20 }}
@@ -279,7 +288,7 @@ export function Landing() {
           </div>
 
           <div className="grid sm:grid-cols-2 gap-6 text-sm">
-            <a href={`tel:${PHONE_DISPLAY.replace(/\s/g, "")}`} className="flex items-start gap-3 hover:text-[var(--gold)] transition">
+            <a href={`tel:${PHONE}`} className="flex items-start gap-3 hover:text-[var(--gold)] transition">
               <MessageCircle className="h-4 w-4 mt-0.5 shrink-0" />
               <div>
                 <p className="text-background/60 text-xs">Teléfono / WhatsApp</p>
