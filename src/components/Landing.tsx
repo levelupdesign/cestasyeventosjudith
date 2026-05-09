@@ -129,7 +129,7 @@ export function Landing() {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-          className="relative mt-12 lg:mt-0 h-[55vh] lg:h-[80vh] w-full"
+          className="relative mt-12 lg:mt-0 w-full flex justify-center lg:justify-end"
         >
           <div className="absolute -inset-6 bg-gradient-rose rounded-[3rem] blur-3xl opacity-50" />
           <img
@@ -137,13 +137,13 @@ export function Landing() {
             alt="Judith Ponce Almansa, creadora de Cestas & Eventos Judith en Málaga"
             width={1200}
             height={1600}
-            className="relative w-full h-full object-cover object-top rounded-[2rem] shadow-glow"
+            className="relative w-auto h-auto max-h-[88vh] max-w-full object-contain rounded-[2rem] shadow-glow"
           />
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 1, duration: 0.6 }}
-            className="absolute -bottom-4 -left-4 sm:bottom-6 sm:left-6 bg-card/95 backdrop-blur rounded-2xl px-5 py-3 shadow-card"
+            className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 bg-card/95 backdrop-blur rounded-2xl px-5 py-3 shadow-card"
           >
             <p className="text-xs text-muted-foreground">Hola, soy</p>
             <p className="font-display text-lg italic text-foreground">Judith ✨</p>
@@ -152,35 +152,27 @@ export function Landing() {
       </section>
 
       {/* SERVICIOS */}
-      <section id="servicios" className="py-24 sm:py-32 px-5 sm:px-10">
-        <motion.div {...fadeUp} className="max-w-3xl mb-16">
-          <p className="text-xs uppercase tracking-[0.25em] text-[var(--gold-foreground)] mb-3">— Servicios</p>
-          <h2 className="text-4xl sm:text-5xl font-semibold text-foreground">
+      <section id="servicios" className="py-14 sm:py-16 px-5 sm:px-10">
+        <motion.div {...fadeUp} className="max-w-3xl mb-8 mx-auto text-center">
+          <p className="text-xs uppercase tracking-[0.25em] text-[var(--gold-foreground)] mb-2">— Servicios</p>
+          <h2 className="text-3xl sm:text-4xl font-semibold text-foreground">
             Diseñado para <span className="italic text-gradient-gold">emocionar</span>
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4 max-w-6xl mx-auto">
           {services.map((s, i) => (
             <motion.article
               key={s.title}
               {...fadeUp}
-              transition={{ duration: 0.6, delay: i * 0.08 }}
-              className="group relative rounded-3xl bg-card shadow-card hover:shadow-glow transition-all duration-500 hover:-translate-y-1 p-7"
+              transition={{ duration: 0.5, delay: i * 0.06 }}
+              className="rounded-2xl bg-card shadow-card hover:shadow-glow transition-all duration-300 p-4 sm:p-5 text-center"
             >
-              <div className="h-14 w-14 rounded-2xl bg-gradient-rose flex items-center justify-center text-primary mb-5 shadow-card">
-                <s.icon className="h-6 w-6" />
+              <div className="h-10 w-10 rounded-xl bg-gradient-rose flex items-center justify-center text-primary mb-3 mx-auto">
+                <s.icon className="h-5 w-5" />
               </div>
-              <h3 className="font-display text-xl font-semibold text-foreground mb-2">{s.title}</h3>
-              <p className="text-sm text-muted-foreground mb-5">{s.desc}</p>
-              <a
-                href={waLink(`¡Hola Judith! Me interesa: ${s.title}.`)}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:gap-2.5 transition-all"
-              >
-                Solicitar presupuesto <ArrowRight className="h-3.5 w-3.5" />
-              </a>
+              <h3 className="font-display text-base font-semibold text-foreground mb-1">{s.title}</h3>
+              <p className="text-xs text-muted-foreground leading-snug">{s.desc}</p>
             </motion.article>
           ))}
         </div>
