@@ -63,7 +63,7 @@ export function Landing() {
       <WhatsAppFloat />
 
       {/* HERO */}
-      <section className="relative min-h-[100svh] grid lg:grid-cols-2 items-center bg-gradient-warm pt-24 pb-16 px-5 sm:px-10">
+      <section className="relative min-h-[100svh] grid lg:grid-cols-2 items-center gap-8 bg-gradient-warm pt-24 pb-10 px-5 sm:px-10 overflow-hidden">
         <div className="relative z-10 max-w-xl lg:pr-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -129,25 +129,27 @@ export function Landing() {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-          className="relative mt-12 lg:mt-0 w-full flex justify-center lg:justify-end"
+          className="relative mt-8 lg:mt-0 w-full flex justify-center lg:justify-end items-end lg:items-stretch lg:h-[calc(100svh-8rem)]"
         >
-          <div className="absolute -inset-6 bg-gradient-rose rounded-[3rem] blur-3xl opacity-50" />
-          <img
-            src={heroImg}
-            alt="Judith Ponce Almansa, creadora de Cestas & Eventos Judith en Málaga"
-            width={1200}
-            height={1600}
-            className="relative w-auto h-auto max-h-[88vh] max-w-full object-contain rounded-[2rem] shadow-glow"
-          />
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 1, duration: 0.6 }}
-            className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 bg-card/95 backdrop-blur rounded-2xl px-5 py-3 shadow-card"
-          >
-            <p className="text-xs text-muted-foreground">Hola, soy</p>
-            <p className="font-display text-lg italic text-foreground">Judith ✨</p>
-          </motion.div>
+          <div className="relative h-full">
+            <div className="absolute -inset-6 bg-gradient-rose rounded-[3rem] blur-3xl opacity-50" />
+            <img
+              src={heroImg}
+              alt="Judith Ponce Almansa, creadora de Cestas & Eventos Judith en Málaga"
+              width={1200}
+              height={1600}
+              className="relative h-[60vh] lg:h-full w-auto max-w-full object-contain rounded-[2rem] shadow-glow"
+            />
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 1, duration: 0.6 }}
+              className="absolute bottom-4 left-4 bg-card/95 backdrop-blur rounded-2xl px-5 py-3 shadow-card"
+            >
+              <p className="text-xs text-muted-foreground">Hola, soy</p>
+              <p className="font-display text-lg italic text-foreground">Judith ✨</p>
+            </motion.div>
+          </div>
         </motion.div>
       </section>
 
