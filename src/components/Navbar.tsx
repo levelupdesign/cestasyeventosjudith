@@ -7,7 +7,7 @@ export function Navbar() {
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6 }}
-      className="absolute top-0 left-0 right-0 z-30 px-5 sm:px-10 py-5 flex items-center justify-between"
+      className="absolute top-0 left-0 right-0 z-30 px-5 sm:px-10 lg:px-12 py-5 sm:py-6 flex items-center justify-between"
     >
       <a href="#top" className="flex items-baseline gap-1.5">
         <span className="font-display text-xl sm:text-2xl font-semibold text-foreground">
@@ -19,7 +19,7 @@ export function Navbar() {
         href={waLink()}
         target="_blank"
         rel="noopener noreferrer"
-        className="hidden md:inline-flex items-center rounded-full bg-foreground text-background px-5 py-2.5 text-sm font-medium hover:bg-primary transition-colors"
+        className="hidden md:inline-flex items-center rounded-full bg-foreground text-background px-5 py-2.5 text-sm font-medium tracking-wide shadow-card hover:bg-primary hover:shadow-glow transition-all duration-300"
       >
         Solicitar presupuesto
       </a>

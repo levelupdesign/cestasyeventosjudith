@@ -14,7 +14,7 @@ export function WhatsAppFloat() {
       transition={{ delay: 0.8, type: "spring", stiffness: 200 }}
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
-      className="fixed bottom-5 right-5 z-50 flex items-center gap-2 rounded-full bg-[var(--whatsapp)] px-5 py-3.5 text-white shadow-glow hover:shadow-2xl transition-shadow"
+      className="fixed bottom-5 right-5 z-50 flex items-center gap-2 rounded-full bg-[var(--whatsapp)] px-5 py-3.5 text-white shadow-elevated hover:shadow-glow transition-shadow duration-300"
     >
       <MessageCircle className="h-5 w-5" strokeWidth={2.5} />
       <span className="hidden sm:inline font-medium text-sm">Contacta conmigo</span>
